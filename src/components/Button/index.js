@@ -1,11 +1,10 @@
-function ButtonDefault({ name, url }) {
+function ButtonDefault({ name, redirection, divButton }) {
   return (
-    <button
-      className="button-default"
-      onClick={() => (window.location.href = url)}
-    >
-      {name}
-    </button>
+    <div className={divButton}>
+      <button className="button-default" onClick={redirection}>
+        {name}
+      </button>
+    </div>
   );
 }
 

@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import AnchorDefault from "./components/Anchor";
+import ButtonDefault from "./components/Button";
+import InputLogin from "./components/Input";
+import Title from "./components/Title/index";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <section className="App-section">
+        <div className="div-login">
+          <Title id="title-login" title="Login" />
+          <InputLogin type="text" label="Usuário" />
+          <InputLogin type="password" label="Senha" />
+          <ButtonDefault
+            id="button01"
+            url="https://discord.gg/fDhwxjPT"
+            name="login"
+          />
+          <AnchorDefault
+            href="https://www.google.com/"
+            name="Esqueceu sua senha?"
+          />
+        </div>
+      </section>
     </div>
   );
 }
